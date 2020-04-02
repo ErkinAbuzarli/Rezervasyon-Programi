@@ -1,5 +1,6 @@
 #include <stdio.h>   // Standart kütüphane
 #include <time.h>   // Zaman kütüphanesi,bu programda yalnızca bu günün tarihini almak için kullanıyoruz.
+#include <locale.h> // Türkçe karakterleri derleyicimize tanıtmak için kullandığımız kütüphane.
 
 void Menu();                                            // Menüyü göstericez.
 void Bilgiler();                                        // İstenildiğinde rezervasyon bilgilerini göstericez.
@@ -832,5 +833,6 @@ void Rezervasyon_kaldir(){
 
 void main()   // Başlıyoruz.
 {
+    setlocale(LC_ALL,"Turkish");
     Menu();    
 }
